@@ -21,16 +21,16 @@ require './method'
   
     end
  
-nums = [] #’l’i‚ğ“ü‚ê‚é”z—ñì¬
-averages = []  #•½‹Ï‚ğ“ü‚ê‚é”z—ñì¬
+nums = [] #å€¤æ®µã‚’å…¥ã‚Œã‚‹é…åˆ—ä½œæˆ
+averages = []  #å¹³å‡ã‚’å…¥ã‚Œã‚‹é…åˆ—ä½œæˆ
 num = get_price
 current_price = get_price
-while(true) #–³ŒÀƒ‹[ƒvŠJn
+while(true) #ç„¡é™ãƒ«ãƒ¼ãƒ—é–‹å§‹
   nums.push(num)
   num = get_price
   current_price = get_price
   if nums.length > 60
-    nums.shift #shiftƒƒ\ƒbƒh‚ÅŒÃ‚¢‚à‚Ì‚ğíœ
+    nums.shift #shiftãƒ¡ã‚½ãƒƒãƒ‰ã§å¤ã„ã‚‚ã®ã‚’å‰Šé™¤
     standard_deviation = nums.sd
     lowprice=100000000000 
     bsedprice = 825
@@ -45,17 +45,17 @@ while(true) #–³ŒÀƒ‹[ƒvŠJn
       trend = trendbunsi / trendbunbo
         lowprice=100000000000
         if (get_my_money("BTC")["amount"]>=0.001)&&(bsedprice*1.068 < current_price)&&(trend<-10)
-        puts "”„‚é"
+        puts "å£²ã‚‹"
         order("SELL",current_price,0.001)
         bsedprice = current_price/1000
         elsif(get_my_money("JPY")["amount"]>500)&&(bsedprice*1.068 > current_price)&&(trend>50)
-        puts"”ƒ‚¤"
+        puts"è²·ã†"
         order("BUY",current_price,0.001)
         bsedprice = current_price/1000
       else
         puts"."
         end  
     end
-     #‰ß‹‚ÌÅˆÀ’l‚ğ‚Á‚Ä‚­‚é
+     #éå»ã®æœ€å®‰å€¤ã‚’æŒã£ã¦ãã‚‹
     end  
 end
