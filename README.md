@@ -4,6 +4,8 @@
 # DEMO
 デモムービーです
 https://shimotmk.com/Portfolio/movie/team2.mp4
+
+![](my_video.mp4)
 <video controls="" autoplay="" loop="" height="240" muted="" data-vscid="2z6y9r88u">
   <source src="https://shimotmk.com/Portfolio/movie/team2.mp4">
   <source src="https://shimotmk.com/Portfolio/movie/team2.ogv">
